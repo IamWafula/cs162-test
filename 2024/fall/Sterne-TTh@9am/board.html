@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .kanban-board {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .kanban-column {
+            flex: 1;
+            margin: 0 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: 70vh;
+        }
+
+        .kanban-header {
+            padding: 10px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 800;
+            background-color: #333;
+            color: white;
+        }
+
+        .column-title {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 800;
+            padding: 10px;
+            color: white;
+        }
+
+        .backlog { background-color: #e74c3c; }   /* Red */
+        .todo { background-color: #f39c12; }      /* Orange */
+        .doing { background-color: #3498db; }     /* Blue */
+        .review { background-color: #9b59b6; }    /* Purple */
+        .done { background-color: #2ecc71; }      /* Green */
+
+        .task {
+            background-color: #f4f4f4;
+            border-radius: 6px;
+            margin: 10px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .task-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .task-desc {
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kanban-header">KANBAN</div>
+
+    <div class="kanban-board">
+
+        <!-- Backlog Column -->
+        <div class="kanban-column">
+            <div class="column-title backlog">Backlog</div>
+            <div class="task">
+                <div class="task-title">Feature Planning</div>
+                <div class="task-desc">Plan future features for Q2</div>
+            </div>
+            <div class="task">
+                <div class="task-title">Bug Fixes</div>
+                <div class="task-desc">Identify bugs from user feedback</div>
+            </div>
+        </div>
+
+        <!-- To Do Column -->
+        <div class="kanban-column">
+            <div class="column-title todo">To Do</div>
+            <div class="task">
+                <div class="task-title">Chat Screen</div>
+                <div class="task-desc">Develop User Chat screen</div>
+            </div>
+            <div class="task">
+                <div class="task-title">A/B Test</div>
+                <div class="task-desc">See which landing Page users prefer</div>
+            </div>
+        </div>
+
+        <!-- Doing Column -->
+        <div class="kanban-column">
+            <div class="column-title doing">Doing</div>
+            <div class="task">
+                <div class="task-title">Profile Redesign</div>
+                <div class="task-desc">Redesign Profile page</div>
+            </div>
+        </div>
+
+        <!-- Review Column -->
+        <div class="kanban-column">
+            <div class="column-title review">Review</div>
+            <div class="task">
+                <div class="task-title">Code Review</div>
+                <div class="task-desc">Finish Backlog of code-reviews</div>
+            </div>
+        </div>
+
+        <!-- Done Column -->
+        <div class="kanban-column">
+            <div class="column-title done">Done</div>
+            <div class="task">
+                <div class="task-title">Deploy</div>
+                <div class="task-desc">Deploy latest working update</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
